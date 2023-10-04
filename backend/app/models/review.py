@@ -7,4 +7,4 @@ class Review(db.Model):
     cryability = db.Column(db.Integer, nullable=False)
     overall = db.Column(db.Integer, nullable=False)
     comments = db.Column(db.String(256))
-    user = db.Columbn(db.String(256))
+    user = db.Columbn(db.String(256), db.ForeignKey('user.username'))
