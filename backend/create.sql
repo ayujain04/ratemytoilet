@@ -11,7 +11,8 @@ CREATE TABLE Bathrooms
  PRIMARY KEY (bn, floor, gender));
 
 CREATE TABLE Reviews
-(reviewid INTEGER NOT NULL PRIMARY KEY,
+(user VARCHAR(256) NOT NULL REFERENCES Users(username),
+ reviewid INTEGER NOT NULL PRIMARY KEY,
  poopability INTEGER NOT NULL,
  cleanliness INTEGER NOT NULL,
  cryability INTEGER NOT NULL,
